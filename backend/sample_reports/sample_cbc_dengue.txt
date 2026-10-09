@@ -1,0 +1,20 @@
+NATIONAL INSTITUTE OF EPIDEMIOLOGY & CLINICAL PATHOLOGY
+DEPARTMENT OF HEMATOLOGY - EMERGENCY LAB
+Report Date: 2026-10-08 09:30 AM
+Sample ID: LAB-2026-9812
+Patient: Aarav Sharma (PAT-1001), Age: 28 Yrs / Male
+Referring Unit: Campus Health Center
+
+COMPLETE BLOOD COUNT (CBC) & SEROLOGY:
+Parameter                         Result       Reference Range      Unit      Flag
+-----------------------------------------------------------------------------------
+Hemoglobin (Hb)                   10.8         12.0 - 16.5          g/dL      LOW
+Total Leucocyte Count (WBC)       3,100        4,000 - 11,000       /mcL      LOW
+Platelet Count                    42,000       150,000 - 450,000    /mcL      CRITICAL LOW
+Hematocrit (PCV)                  44.2         38.0 - 50.0          %         NORMAL
+Dengue NS1 Antigen                POSITIVE     Negative             Qual.     CRITICAL
+Dengue IgM Antibody               POSITIVE     Negative             Qual.     HIGH
+
+Clinical Impression:
+Profound thrombocytopenia with leukopenia and positive Dengue NS1/IgM serology.
+High risk of dengue hemorrhagic manifestation. Requires immediate clinical evaluation and fluid monitoring.

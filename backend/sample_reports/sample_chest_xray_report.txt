@@ -1,0 +1,12 @@
+INSTITUTIONAL HEALTH RADIOLOGY REPORT - CHEST PA VIEW
+Report Date: 2026-10-08 10:15 AM
+Patient ID: PAT-1005 (Vikram Singh), Age: 52 Yrs / Male
+
+FINDINGS:
+Cardiac silhouette appears mildly enlarged (Cardiomegaly).
+Patchy alveolar infiltrates and bronchovascular prominence noted in both perihilar regions.
+Costophrenic angles are clear. Trachea is central. No pneumothorax.
+
+IMPRESSION:
+Features suggestive of pulmonary vascular congestion with cardiomegaly.
+Urgent clinical correlation with ECG and cardiac biomarkers advised.

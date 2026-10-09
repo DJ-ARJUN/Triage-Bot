@@ -1,0 +1,19 @@
+COMMUNITY HEALTH SCREENING & METABOLIC LABORATORY
+Report Date: 2026-10-07 04:15 PM
+Sample ID: LAB-2026-5541
+Patient: Sunita Devi (PAT-1002), Age: 45 Yrs / Female
+Referring Unit: NCD Chronic Care Desk
+
+GLYCEMIC & RENAL BIOCHEMISTRY PANEL:
+Parameter                         Result       Reference Range      Unit      Flag
+-----------------------------------------------------------------------------------
+Fasting Blood Sugar (FBS)         218          70 - 100             mg/dL     HIGH
+Post-Prandial Glucose (PPBS)      310          90 - 140             mg/dL     HIGH
+HbA1c (Glycated Hb)               10.4         4.0 - 5.7            %         CRITICAL HIGH
+Serum Creatinine                  1.4          0.6 - 1.2            mg/dL     HIGH
+Blood Urea                        48           15 - 40              mg/dL     HIGH
+Estimated GFR (eGFR)              48           > 90                 mL/min    LOW
+
+Clinical Impression:
+Severely uncontrolled Type 2 Diabetes Mellitus with early diabetic nephropathy (Stage 3 CKD).
+Review glycemic regimen, renal-protective therapy, and lifestyle modification.

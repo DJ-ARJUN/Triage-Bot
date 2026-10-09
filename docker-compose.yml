@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: triage_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-triage_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the project-root .env file}
+      POSTGRES_DB: ${POSTGRES_DB:-triage_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-triage_user} -d ${POSTGRES_DB:-triage_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: triage_backend
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-triage_user}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in the project-root .env file}@postgres:5432/${POSTGRES_DB:-triage_db}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in the project-root .env file}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      ENABLE_PII_MASKING: ${ENABLE_PII_MASKING:-true}
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend_uploads:/app/uploads
+      - ./backend/sample_reports:/app/sample_reports
+
+  reviewer-web:
+    build:
+      context: ./reviewer-web
+      dockerfile: Dockerfile
+    container_name: triage_reviewer_web
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+
+volumes:
+  pgdata:
+  backend_uploads:
+
